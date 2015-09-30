@@ -1,0 +1,5 @@
+influxdb:
+  image: sebastien-prudhomme/influxdb
+  ports:
+    - "8083:8083"
+    - "8086:8086"

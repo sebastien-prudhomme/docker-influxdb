@@ -1,3 +1,9 @@
+grafana:
+  image: sebastien-prudhomme/grafana
+  ports:
+    - "3000:3000"
+  links:
+    - influxdb
 influxdb:
   image: sebastien-prudhomme/influxdb
   ports:

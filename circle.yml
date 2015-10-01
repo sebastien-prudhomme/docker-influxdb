@@ -13,6 +13,6 @@ test:
     - docker run -d -p 3000:3000 sebastien-prudhomme/grafana; sleep 10
     - curl --retry 10 --retry-delay 5 -v http://localhost:3000
 
-    - docker run -d -p 8003:8003 -p 8006:8006 sebastien-prudhomme/influxdb; sleep 10
-    - curl --retry 10 --retry-delay 5 -v http://localhost:8003
-    - curl --retry 10 --retry-delay 5 -v http://localhost:8006
+    - docker run -d -p 8083:8083 -p 8086:8086 sebastien-prudhomme/influxdb; sleep 10
+    - curl --retry 10 --retry-delay 5 -v http://localhost:8083
+    - curl --retry 10 --retry-delay 5 -v http://localhost:8086

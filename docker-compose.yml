@@ -11,6 +11,7 @@ grafana:
 influxdb:
   image: sebastien-prudhomme/influxdb
   ports:
+    - "4242:4242"
     - "8083:8083"
     - "8086:8086"
 telegraf:

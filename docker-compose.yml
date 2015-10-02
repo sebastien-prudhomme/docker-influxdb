@@ -1,3 +1,7 @@
+collectd:
+  image: sebastien-prudhomme/collectd
+  links:
+    - influxdb
 grafana:
   image: sebastien-prudhomme/grafana
   ports:

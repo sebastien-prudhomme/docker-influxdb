@@ -1,0 +1,8 @@
+require 'docker'
+
+task :default => :build
+
+task :build do
+  image = Docker::Image.build_from_dir('.')
+  image.tag('repo' => 'sebastien-prudhomme/collectd', 'force' => true)
+end

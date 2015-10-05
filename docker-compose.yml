@@ -11,6 +11,7 @@ grafana:
 influxdb:
   image: sebastien-prudhomme/influxdb
   ports:
+    - "2003:2003"
     - "4242:4242"
     - "8083:8083"
     - "8086:8086"

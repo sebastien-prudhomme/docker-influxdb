@@ -5,6 +5,7 @@ RUN yum install -y initscripts
 RUN yum install -y https://s3.amazonaws.com/influxdb/influxdb-0.9.4.1-1.x86_64.rpm
 COPY ./files /
 
+EXPOSE 2003
 EXPOSE 4242
 EXPOSE 8083
 EXPOSE 8086

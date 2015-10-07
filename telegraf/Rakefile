@@ -1,8 +1,11 @@
 require 'docker'
+require 'rspec/core/rake_task'
 
 task :default => :build
 
 task :build do
   image = Docker::Image.build_from_dir('.')
-  image.tag('repo' => 'sebastien-prudhomme/telegraf', 'force' => true)
+  image.tag(:repo => 'sebastien-prudhomme/telegraf', :force => true)
 end
+
+RSpec::Core::RakeTask.new(:spec)
